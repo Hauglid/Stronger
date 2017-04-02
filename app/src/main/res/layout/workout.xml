@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_workout" />
+
+    <EditText
+        android:id="@+id/inputDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputDB"
+
+        >
+
+        <Button
+            android:id="@+id/addSQL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_columnWeight="1"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:onClick="addToDB"
+            />
+
+        <Button
+            android:id="@+id/deleteSQL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Delete"
+            android:layout_columnWeight="1"
+            android:onClick="deleteFromDB"
+            android:layout_alignParentStart="true"
+            />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/outputDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="smh"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+</RelativeLayout>
